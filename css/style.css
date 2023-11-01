@@ -100,6 +100,7 @@ address {
     display: flex;
     gap: 40px;
     margin: 0px;
+    padding: 0;
 }
 
 .page-nav-menu-item {}
@@ -112,12 +113,18 @@ address {
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current {
+    position: relative;
+    color:
+}
 
-.menu-link:hover,
-.menu-link:focus {
+.page-nav-menu-link:hover,
+.page-nav-menu-link:focus {
     color: #404BBF;
+
 }
 
 .page-header-info {
@@ -170,6 +177,10 @@ address {
 .heroy {
     background: #2E2F42;
     padding: 188px 0px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)),
+        url("../images/hero.jpg");
+    background-size: cover;
 }
 
 .heroy-container-title {
@@ -180,6 +191,8 @@ address {
     line-height: 1.07;
     letter-spacing: 0.02em;
     max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .heroy-container-service {
@@ -196,6 +209,7 @@ address {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .heroy-service:hover,
@@ -212,6 +226,19 @@ address {
     font-family: "Roboto" sans-serif;
     flex-shrink: 0;
 
+}
+
+.logotype-icon-fon {
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background: #F4F4FD;
+    width: 264px;
+    height: 112px;
+    padding: 24px 100px;
+}
+
+.logotype-icon {
+    display: flex;
 }
 
 .visually-hidden {
@@ -285,7 +312,6 @@ address {
 }
 
 .card-people-plate {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -319,7 +345,6 @@ address {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
 }
 
 /*================= /CADR =================== */
@@ -360,7 +385,6 @@ address {
 
 
 .portfolio-memu-name-descr {
-    display: flex;
     padding: 32px 16px;
     flex-direction: column;
     justify-content: center;
