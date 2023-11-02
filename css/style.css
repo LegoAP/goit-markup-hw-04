@@ -62,6 +62,9 @@ address {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-nav-info {
@@ -114,17 +117,36 @@ address {
     padding-top: 24px;
     padding-bottom: 24px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .current {
     position: relative;
-    color:
+    color: #404BBF;
 }
 
 .page-nav-menu-link:hover,
 .page-nav-menu-link:focus {
     color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.page-nav-menu-link:hover::after,
+.page-nav-menu-link:focus::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: -1px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header-info {
@@ -159,6 +181,7 @@ address {
     font-style: normal;
     text-decoration: none;
     margin-right: 0px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-tel:hover,
@@ -181,6 +204,9 @@ address {
             rgba(46, 47, 66, 0.70)),
         url("../images/hero.jpg");
     background-size: cover;
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .heroy-container-title {
@@ -210,10 +236,11 @@ address {
     border-radius: 4px;
     cursor: pointer;
     margin: 0 auto;
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.heroy-service:hover,
-.heroy-service:focus {
+.heroy-container-service:hover,
+.heroy-container-service:focus {
     background-color: #404BBF;
 }
 
@@ -228,7 +255,7 @@ address {
 
 }
 
-.logotype-icon-fon {
+.title-logotype-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,6 +266,7 @@ address {
     border: 1px solid #8E8F99;
     background: #F4F4FD;
     margin-bottom: 8px;
+
 }
 
 .current {
@@ -303,6 +331,11 @@ address {
     background-color: #F4F4FD;
 }
 
+.indent {
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     color: #2E2F42;
     text-align: center;
@@ -320,9 +353,10 @@ address {
     justify-content: center;
     align-items: flex-start;
     gap: 24px;
+    padding: 0;
 }
 
-.card-people-plate {
+.people: .card-people-plate {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -340,7 +374,6 @@ address {
 
 .card-people-name {
     color: #2E2F42;
-    background-color: #FFFFFF;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -588,6 +621,11 @@ address {
     height: 40px;
     padding: 12px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-menu-link:hover,
+.social-icon-menu-link:focus {
+    background-color: #31d0aa;
 }
 
 .social-icon-page-end {
