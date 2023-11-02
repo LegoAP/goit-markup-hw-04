@@ -133,8 +133,8 @@ address {
     position: relative;
 }
 
-.current:hover::after,
-.current:focus::after {
+.current::after,
+.current::after {
     content: '';
     position: absolute;
     left: 0;
